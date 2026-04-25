@@ -20,6 +20,12 @@ function App() {
   return (
     <div className="container">
       <h1>Pokedex</h1>
+
+    <nav style={{ marginBottom: '20px' }}>
+        <Link to="/about" style={{ color: '#ffcb05', textDecoration: 'none', fontWeight: 'bold' }}>
+        About this project
+        </Link>
+    </nav>
       
       <div className="pokemon-grid">
         {pokemon.map((p, index) => {

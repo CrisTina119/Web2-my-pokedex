@@ -4,6 +4,7 @@ import { createHashRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
 import PokemonDetails from './routes/PokemonDetails' // O vom crea imediat
 import './index.css'
+import About from './About'
 
 // config routes using HashRouter (#)
 const router = createHashRouter([
@@ -14,6 +15,10 @@ const router = createHashRouter([
   {
     path: "/pokemon/:name",
     element: <PokemonDetails />,
+  },
+  {
+    path: "/about", 
+    element: <About />,
   },
 ]);
 
