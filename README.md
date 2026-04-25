@@ -1,16 +1,35 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pokedex Project 
+WEB2 Assignment 2
 
-Currently, two official plugins are available:
+This project is a React-based Pokedex application that retrieves data from the PokéAPI. It was developed as part of the WEB2 course .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live Demo: https://cristina119.github.io/Web2-my-pokedex/#/
 
-## React Compiler
+Following the asynchronous programming principles learned in Chapter 5 (Asynchronous Programming), I implemented the data fetching using the "Fetch API and Promises" within React "useEffect" hooks. This approach ensures efficient data retrieval and state management, as practiced in the course exercises.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project structure also follows the "Thinking in React" methodology from Chapter 6, breaking the UI into modular and reusable components.
 
-## Expanding the ESLint configuration
+Implemented Features
+- Data Fetching: Real-time data retrieval from PokéAPI.
+- Pagination: Implemented using `limit` and `offset` query parameters to navigate through the Pokémon list (20 per page).
+- Client-Side Routing: Utilized `react-router-dom` with `createHashRouter` to manage navigation between the main list and the detailed view, ensuring compatibility with GitHub Pages.
+- Detailed View: Clicking on a Pokémon displays specific information: images, types, height, and weight.
+- Responsive Design: A custom Dark Mode UI with interactive hover effects and CSS transitions for a better user experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+- React (Hooks: "useState", "useEffect", "useParams")
+- Vite (Build tool)
+- React Router (Navigation)
+- CSS3 (Custom styling with Grid and Flexbox)
+
+How to Run Locally
+1. Clone the repository:
+   git clone https://github.com/CrisTina119/Web2-my-pokedex
+
+2. Install dependencies:
+   npm install
+   
+3. Start the development server:
+   npm run dev
