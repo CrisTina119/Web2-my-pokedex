@@ -1,21 +1,24 @@
 import { Link } from 'react-router-dom'
+import AppControls from './AppControls'
+import { useAppSettings } from './appSettings'
+import './App.css'
 
 function About() {
+  const { language, setLanguage, theme, setTheme, t } = useAppSettings()
+
   return (
     <div className="container">
-      <h1>About Pokedex</h1>
-      <div className="card" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'left' }}>
-        <p>This application was built to demonstrate React core concepts:</p>
+      <AppControls language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme} t={t} />
+      <Link to="/" className="back-link">{t.backToPokedex}</Link>
+      <div className="about-card">
+        <p className="eyebrow">{t.assignment}</p>
+        <h1>{t.aboutTitle}</h1>
+        <p>{t.aboutIntro}</p>
         <ul>
-          <li>Data fetching from PokéAPI</li>
-          <li>React Router for navigation</li>
-          <li>Custom CSS with Dark Mode and transitions</li>
+          <li>{t.fetching}</li>
+          <li>{t.routing}</li>
+          <li>{t.styling}</li>
         </ul>
-        <p style={{ marginTop: '20px' }}>Created as part of Assignment 2 - WEB2 Course.</p>
-        
-        <Link to="/" className="details-button" style={{ marginTop: '20px', display: 'inline-block' }}>
-          Back to Pokedex
-        </Link>
       </div>
     </div>
   )
